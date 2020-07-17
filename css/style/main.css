@@ -94,7 +94,7 @@ body {
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
 }
 .post__with-side {
-  max-width: calc(var(--content-width) + 220px * 2);
+  max-width: calc(var(--content-width) + $max_width_toc * 2);
   margin: 0 auto;
 }
 .post-card {
@@ -664,6 +664,7 @@ overflows table td {
   position: relative;
   max-width: var(--content-width);
   margin: 0 auto;
+  background-color: "#fff";
 }
 .archives .archives-item {
   display: flex;
@@ -686,15 +687,6 @@ overflows table td {
   background: var(--main-color);
   line-height: 1.2rem;
 }
-.archives .archives-item .archives-content {
-  flex: 1 1 auto;
-  box-flex: 1;
-  padding: 2px 0 2px 0.8rem;
-}
-.archives .archives-item .archives-content .archives-title {
-  color: var(--title-color);
-  font-size: 20px;
-}
 .archives .archives-item .archives-icon::before {
   border: 0.1rem solid var(--main-color);
   border-radius: 50%;
@@ -705,6 +697,15 @@ overflows table td {
   position: absolute;
   top: 0.4rem;
   width: 0.4rem;
+}
+.archives .archives-item .archives-content {
+  flex: 1 1 auto;
+  box-flex: 1;
+  padding: 2px 0 2px 0.8rem;
+}
+.archives .archives-item .archives-content .archives-title {
+  color: var(--title-color);
+  font-size: 20px;
 }
 .archives .archives-item:hover .archives-icon::before {
   border: 0.1rem solid var(--main-color);
@@ -826,7 +827,7 @@ overflows table td {
   font-family: rubik, sans-serif, Varela Round;
 }
 .header .header__left .logo__text {
-  font-size: 18px;
+  font-size: 2em;
   padding: 16px 10px 16px 10px;
   border-radius: 5px;
 }
@@ -932,7 +933,7 @@ overflows table td {
   margin-right: auto;
 }
 .cover .cover__intro {
-  color: #999;
+  color: #fff;
 }
 .round {
   border-radius: 50%;
@@ -1009,7 +1010,10 @@ nav a:hover {
   float: right;
   position: -webkit-sticky;
   position: sticky;
-  top: calc(($header_height + 10px));
+  top: calc((($header_height + 10px)));
+}
+.post-side a {
+  color: #545454;
 }
 .post-side .post-side__toc {
   display: block;
@@ -1023,10 +1027,12 @@ nav a:hover {
   height: calc(100vh - $header_height - 20px);
   list-style-type: none;
   padding-left: 0.6em;
+  background-color: "#fff";
 }
 .post-side .post-side__toc .toc .toc-child {
   padding-left: 0.35em;
   list-style-type: none;
+  background-color: "#fff";
 }
 @media screen and (max-width: 1246px) {
   .post-side {
@@ -1044,6 +1050,7 @@ nav a:hover {
 @media screen and (min-width: 1080px) {
   .post-side .post-side__toc .toc {
     display: block;
+    background-color: "#fff";
   }
 }
 @media screen and (max-width: 1080px) {
