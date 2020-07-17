@@ -57,6 +57,13 @@ body {
   padding: 0;
   line-height: 1.8;
 }
+body {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
 @media screen and (max-width: 650px) {
   body {
     --space: 1.5rem;
@@ -126,6 +133,7 @@ body {
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
+  color: #000;
 }
 .post-card__meta,
 .post-title__meta {
@@ -921,6 +929,15 @@ overflows table td {
 }
 .cover .cover__intro {
   color: #999;
+}
+.round {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #eb5757;
+  border-width: medium;
+  padding: 5px;
+  background-clip: content-box;
+  background-color: #ccc;
 }
 nav {
   max-width: var(--content-width);
