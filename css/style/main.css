@@ -8,7 +8,7 @@
   --bg-code: #eee;
   --bg-codeblock: #f8f8f8;
   --body-color: #4c4d4e;
-  --title-color: #50596c;
+  --title-color: #eb5757;
   --border-color: rgba(0,0,0,0.1);
   --space: 3.5rem;
   --content-width: 776px;
@@ -133,7 +133,7 @@ body {
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
-  color: #000;
+  color: #eb5757;
 }
 .post-card__meta,
 .post-title__meta {
@@ -143,6 +143,10 @@ body {
   font-size: 0.8em;
   opacity: 0.8;
   font-family: rubik, sans-serif;
+}
+.post-card__meta a,
+.post-title__meta a {
+  color: "#fff";
 }
 .post-card__header,
 .post__header {
@@ -1005,17 +1009,18 @@ nav a:hover {
   float: right;
   position: -webkit-sticky;
   position: sticky;
-  top: calc(60px + 10px);
+  top: calc(($header_height + 10px));
 }
 .post-side .post-side__toc {
   display: block;
+  background-color: "#fff";
 }
 .post-side .post-side__toc .toc {
   display: none;
   width: 220px;
   font-size: 14px;
   overflow: auto;
-  height: calc(100vh - 60px - 20px);
+  height: calc(100vh - $header_height - 20px);
   list-style-type: none;
   padding-left: 0.6em;
 }
