@@ -76,7 +76,10 @@ body {
 .main.tagscloud {
   margin: 0 auto;
   padding: 0 var(--space);
-  max-width: 100%;
+  min-height: 10em;
+  max-width: 60%;
+  background-color: #fff;
+  border-radius: 5px;
 }
 .main.friends {
   margin: 0 auto;
