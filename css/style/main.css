@@ -77,7 +77,8 @@ body {
   margin: 0 auto;
   padding: 0 var(--space);
   min-height: 10em;
-  max-width: 60%;
+  max-width: 75%;
+  min-width: 19em;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -607,7 +608,7 @@ overflows table td {
 }
 .md-content a {
   background-color: initial;
-  color: #0366d6;
+  color: #eb5757;
   text-decoration: none;
 }
 .md-content a:hover {
@@ -963,6 +964,45 @@ nav a:hover {
   background-color: var(--main-color);
   color: var(--bg-content-color);
   text-decoration: none;
+}
+.post-nav {
+  background-color: #fff;
+  display: block;
+  font-size: 0;
+  margin: 15px auto;
+  max-width: 850px;
+  padding: 0 10px;
+  position: relative;
+}
+.post-nav .post-nav-item {
+  display: inline-block;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 14px;
+  padding: 10px 0;
+  position: relative;
+  vertical-align: top;
+  width: 49.5%;
+}
+.post-nav .post-nav-item:hover {
+  color: #2196f3;
+}
+.post-nav .post-nav-item span {
+  display: inline-block;
+  position: absolute;
+}
+.post-nav .post-nav-item a {
+  margin-left: 20px;
+  display: inline-block;
+}
+.post-nav .post-nav-prev {
+  text-align: right;
+}
+.post-nav .post-nav-prev a {
+  margin-right: 20px;
+}
+.post-nav .post-nav-prev span {
+  right: 0;
 }
 .post-cats {
   display: inline-block;
